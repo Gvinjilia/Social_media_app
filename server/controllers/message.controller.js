@@ -1,6 +1,6 @@
 const Group = require("../models/group.model");
 const Message = require("../models/message.model");
-const AppError = require("../utils/Error.js");
+const AppError = require("../utils/appError.js");
 const catchAsync = require("../utils/catchAsync");
 
 const sendMessage = catchAsync(async (req, res, next) => {

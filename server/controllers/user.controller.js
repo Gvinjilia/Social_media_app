@@ -1,6 +1,6 @@
 const Post = require("../models/post.model");
 const User = require("../models/user.model");
-const AppError = require("../utils/Error.js");
+const AppError = require("../utils/appError.js");
 const catchAsync = require("../utils/catchAsync");
 
 const getUsers = catchAsync(async (req, res, next) => {

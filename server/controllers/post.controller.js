@@ -1,5 +1,5 @@
 const Post = require("../models/post.model");
-const AppError = require("../utils/Error.js");
+const AppError = require("../utils/appError.js");
 const catchAsync = require("../utils/catchAsync");
 
 const formatMongoQuery = (query) => {
