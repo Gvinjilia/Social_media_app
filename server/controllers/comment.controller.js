@@ -1,6 +1,6 @@
 const Comment = require("../models/comment.model");
 const Post = require("../models/post.model");
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 const getCommentByItsId = catchAsync(async (req, res, next) => {
