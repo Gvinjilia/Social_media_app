@@ -50,7 +50,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(cookieParser());
 app.use(express.json());
 
-app.use(mongoSanitizer());
+// app.use(mongoSanitizer());
 app.use(helmet());
 // app.use(xss());
 
