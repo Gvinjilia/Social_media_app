@@ -2,7 +2,7 @@ const FriendRequest = require("../models/friendRequest.model");
 const Friendship = require("../models/friendship.model");
 const Group = require("../models/group.model");
 const User = require("../models/user.model");
-const AppError = require("../utils/appError");
+const AppError = require("../utils/appError.js");
 const catchAsync = require("../utils/catchAsync");
 
 const getFriends = catchAsync(async (req, res, next) => {
