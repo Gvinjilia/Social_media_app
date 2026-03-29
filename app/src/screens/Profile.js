@@ -119,7 +119,7 @@ const Profile = () => {
                                                     ))
                                                 }
                                             </View>
-                                            <Image source={{ uri: `http://192.168.0.13:3000/images/${p.postImage}` }} style={{ width: 370, height: 200, objectFit: 'cover' }} />
+                                            <Image source={{ uri: `https://social-media-app-1h2n.onrender.com/api/images/${p.postImage}` }} style={{ width: 370, height: 200, objectFit: 'cover' }} />
                                             <Text style={styles.postTitleStyles}>{p.title}</Text>
                                             <Text>{p.content}</Text>
 
