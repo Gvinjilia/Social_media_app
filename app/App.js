@@ -7,8 +7,14 @@ import { UserProvider } from './src/contexts/UserContext';
 import { CommentProvider } from './src/contexts/CommentContext';
 import SocketProvider from './src/contexts/SocketContext';
 import MessageProvider from './src/contexts/MessageContext';
+import { useEffect } from 'react';
+import UpdatesDemo from './src/utils/UpdatesDemo';
 
 export default function App(){
+  useEffect(() => {
+    UpdatesDemo();
+  }, []);
+
   return (
     <NavigationContainer>
       <SocketProvider>
