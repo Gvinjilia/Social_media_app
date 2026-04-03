@@ -11,9 +11,9 @@ import { useEffect } from 'react';
 import UpdatesDemo from './src/utils/UpdatesDemo';
 
 export default function App(){
-  useEffect(() => {
-    UpdatesDemo();
-  }, []);
+  // useEffect(() => {
+  //   UpdatesDemo();
+  // }, []);
 
   return (
     <NavigationContainer>
