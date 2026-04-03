@@ -34,7 +34,7 @@ const io = new Server(server, {
 });
 
 app.use(cors({
-    origin: [process.env.CLIENT_URL, 'http://192.168.0.13:8081'],
+    origin: ['*', process.env.CLIENT_URL, 'http://192.168.0.13:8081'],
     credentials: true
 }));
 
