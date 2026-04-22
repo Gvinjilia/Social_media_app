@@ -81,7 +81,7 @@ const User = ({ route }) => {
                                 userPosts.length > 0 ? (
                                     userPosts.map((p, index) => (
                                         <View key={index} style={styles.postStyles}>
-                                            <Image source={{ uri: `https://social-media-app-1h2n.onrender.com/api/images/${p.postImage}` }} style={{ width: '100%', height: 200, objectFit: 'cover' }} />
+                                            <Image source={{ uri: `http://192.168.0.8:3000/api/images/${p.postImage}` }} style={{ width: '100%', height: 200, objectFit: 'cover' }} />
                                             <Text style={styles.postTitleStyles}>{p.title}</Text>
                                             <Text>{p.content}</Text>
                                         </View>

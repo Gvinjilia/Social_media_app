@@ -1,9 +1,11 @@
-import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, Button, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useAuth } from "../contexts/AuthContext";
 import { usePost } from "../contexts/PostContext";
 import * as ImagePicker from 'expo-image-picker';
 import { useEffect, useState } from "react";
 import { useUsers } from "../contexts/UserContext";
+
+import * as Sentry from '@sentry/react-native';
 
 const Profile = () => {
     const [title, setTitle] = useState('');
@@ -69,6 +71,7 @@ const Profile = () => {
 
     return (
         <ScrollView style={styles.mainDiv}>
+            <Button title='Try!' onPress={ () => { Sentry.captureException(new Error('First error')) }}/>
             <View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <View style={styles.userInfoMainDiv}>
@@ -119,7 +122,7 @@ const Profile = () => {
                                                     ))
                                                 }
                                             </View>
-                                            <Image source={{ uri: `https://social-media-app-1h2n.onrender.com/api/images/${p.postImage}` }} style={{ width: 370, height: 200, objectFit: 'cover' }} />
+                                            <Image source={{ uri: `http://192.168.0.8:3000/api/images/${p.postImage}` }} style={{ width: 370, height: 200, objectFit: 'cover' }} />
                                             <Text style={styles.postTitleStyles}>{p.title}</Text>
                                             <Text>{p.content}</Text>
 

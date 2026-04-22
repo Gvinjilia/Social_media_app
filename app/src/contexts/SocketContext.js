@@ -5,9 +5,9 @@ const SocketContext = createContext();
 
 export const useSocket = () => useContext(SocketContext);
 
-// const SOCKET_URL = 'http://192.168.0.13:3000';
+const SOCKET_URL = 'http://192.168.0.8:3000';
 
-const SOCKET_URL = 'https://social-media-app-1h2n.onrender.com';
+// const SOCKET_URL = 'https://social-media-app-1h2n.onrender.com';
 
 const SocketProvider = ({ children }) => {
     const [socket, setSocket] = useState(null);

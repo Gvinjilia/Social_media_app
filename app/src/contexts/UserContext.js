@@ -4,9 +4,9 @@ import { useSocket } from "./SocketContext";
 
 const UserContext = createContext();
 
-// const API_URL = 'http://192.168.0.13:3000/api';
+const API_URL = 'http://192.168.0.8:3000/api';
 
-const API_URL = 'https://social-media-app-1h2n.onrender.com/api';
+// const API_URL = 'https://social-media-app-1h2n.onrender.com/api';
 
 export const useUsers = () => useContext(UserContext);
 
