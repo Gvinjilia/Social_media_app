@@ -25,22 +25,25 @@ const messageRouter = require('./routers/message.router');
 
 dotenv.config();
 
+const allowedOrigins = [process.env.CLIENT_URL, 'http://localhost:5173'];
+
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: '*'
+        origin: allowedOrigins,
+        credentials: 'include'
     }
 });
 
 app.use(cors({
-    origin: ['*', process.env.CLIENT_URL, 'http://192.168.0.8:8081'],
+    origin: allowedOrigins,
     credentials: true
 }));
 
 app.use(rateLimiter({
     windowMs: 60 * 60 * 1000,
-    max: 100,
+    max: 30,
     message: 'Too many requests'
 }));
 
@@ -50,9 +53,9 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(cookieParser());
 app.use(express.json());
 
-// app.use(mongoSanitizer());
+app.use(mongoSanitizer());
 app.use(helmet());
-// app.use(xss());
+app.use(xss());
 
 app.use('/api/posts', postRouter);
 app.use('/api/auth', authRouter);

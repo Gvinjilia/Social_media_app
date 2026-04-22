@@ -71,7 +71,6 @@ const Profile = () => {
 
     return (
         <ScrollView style={styles.mainDiv}>
-            <Button title='Try!' onPress={ () => { Sentry.captureException(new Error('First error')) }}/>
             <View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <View style={styles.userInfoMainDiv}>

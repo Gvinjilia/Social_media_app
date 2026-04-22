@@ -19,6 +19,25 @@
           "project": "react-native",
           "organization": "social-media-ip"
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "react-native",
+          "organization": "test-pax"
+        }
+      ],
+      [
+        "updates",
+        {
+          "url": "https://u.expo.dev/4017d488-36ba-4a6f-a68c-099107e0f685",
+          "runtimeVersion": {
+            "policy": "appVersion" 
+          },
+          "checkAutomatically": "ON_LOAD",
+          "enabled": true
+        }
       ]
     ]
   }
